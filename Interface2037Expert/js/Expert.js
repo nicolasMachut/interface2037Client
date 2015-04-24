@@ -17,7 +17,7 @@ function demanderQuestion()
 	$("#reponse").empty();
 
 	var req = $.ajax({
-		url : "http://192.168.43.129:8282/interface2037/expert/question/"+nomExpert,
+		url : "http://"+ip+":8282/interface2037/expert/question/"+nomExpert,
 		dataType : "text",
 		type : "GET"
 	});
@@ -72,7 +72,7 @@ function EnvoyerReponse()
 	data["idQuestion"]= idQuestion;
 	data["reponseText"]=reponse;
 	var req = $.ajax({
-		url : "http://192.168.43.129:8282/interface2037/expert/question",
+		url : "http://"+ip+":8282/interface2037/expert/question",
 		type : "PUT",
 		data : data,
 		crossOrigin : false,
@@ -125,7 +125,7 @@ function signifierReponseImpossible()
 	data["idQuestion"]=idQuestion;
 	data["idExpert"]=nameOfExpert;
 	var req = $.ajax({
-		url : "http://192.168.43.129:8282/interface2037/expert/question/impossible",
+		url : "http://"+ip+":8282/interface2037/expert/question/impossible",
 		dataType : "text",
 		type : "PUT",
 		data:data,

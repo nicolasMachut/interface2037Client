@@ -54,7 +54,7 @@ function poserQuestion()
 	 data["questionText"] = question;
 	var req = $.ajax({
 
-		url : "http://192.168.43.129:8282/interface2037/client/question",
+		url : "http://"+ip+":8282/interface2037/client/question",
 		dataType : "text",
 		data : data,
 		type : "POST"
@@ -121,7 +121,7 @@ function demanderReponse()
 	
 	var req = $.ajax({
 
-		url : "http://192.168.43.129:8282/interface2037/client/question/" + idquestion,
+		url : "http://"+ip+":8282/interface2037/client/question/" + idquestion,
 		cache : true,
 		dataType : "text",
 		
